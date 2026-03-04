@@ -1,0 +1,145 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: var(--font-manrope), sans-serif;
+  min-height: 100vh;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.02em;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #d4af37, #f4e6c2);
+  border-radius: 9999px;
+}
+
+.container-max {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.section-gap {
+  padding-block: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-gap {
+    padding-block: 7rem;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(120deg, #d4af37 0%, #f4e6c2 100%);
+}
+
+.luxury-card {
+  position: relative;
+  overflow: hidden;
+  background: #1c1c1c;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.luxury-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), transparent 36%);
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.btn-luxury {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 0 0 rgba(212, 175, 55, 0.2), 0 8px 24px rgba(212, 175, 55, 0.2);
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-luxury::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -140%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.45) 50%, transparent 100%);
+  transform: skewX(-22deg);
+  transition: left 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.btn-luxury::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 10%, transparent 55%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  z-index: -1;
+}
+
+.btn-luxury:hover::before {
+  left: 150%;
+}
+
+.btn-luxury:hover {
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.38), 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.btn-luxury:active {
+  transform: scale(0.97);
+}
+
+.btn-luxury:active::after {
+  transform: scale(2.5);
+  opacity: 0.28;
+}
+
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: reveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
