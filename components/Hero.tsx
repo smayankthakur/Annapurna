@@ -17,6 +17,11 @@ export default function Hero({ orderUrl }: HeroProps) {
     offset: ["start start", "end start"],
   });
   const y = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const scrollToLocation = () => {
+    document.getElementById("location")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
 
   return (
     <section id="hero" ref={ref} className="relative min-h-screen overflow-hidden">
@@ -68,6 +73,13 @@ export default function Hero({ orderUrl }: HeroProps) {
               Order Now
             </a>
           </div>
+          <button
+            type="button"
+            onClick={scrollToLocation}
+            className="mt-4 text-amber-400 underline underline-offset-4 transition hover:text-amber-300"
+          >
+            📍 View Location
+          </button>
 
           <p className="mt-6 text-sm font-semibold text-gold sm:text-base">
             🔥 500+ orders served in West Delhi this week

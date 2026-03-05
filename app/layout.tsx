@@ -41,12 +41,22 @@ export default function RootLayout({
         "@id": "https://annapurnarasoi.in/#restaurant",
         name: "Annapurna Rasoi",
         servesCuisine: "North Indian",
-        priceRange: "â‚¹â‚¹",
+        priceRange: "\u20b9\u20b9",
         address: {
           "@type": "PostalAddress",
           addressLocality: "West Delhi",
           addressRegion: "Delhi",
           addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 28.663522975546325,
+          longitude: 77.06417251108104,
+        },
+        hasMap: "https://www.google.com/maps?q=Annapurna+Rasoi+Paschim+Vihar+Delhi",
+        areaServed: {
+          "@type": "Place",
+          name: "West Delhi",
         },
       },
       {
@@ -54,11 +64,23 @@ export default function RootLayout({
         "@id": "https://annapurnarasoi.in/#localbusiness",
         name: "Annapurna Rasoi",
         image: "https://annapurnarasoi.in/og-image.jpg",
+        servesCuisine: "North Indian",
+        priceRange: "\u20b9\u20b9",
         address: {
           "@type": "PostalAddress",
           addressLocality: "West Delhi",
           addressRegion: "Delhi",
           addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 28.663522975546325,
+          longitude: 77.06417251108104,
+        },
+        hasMap: "https://www.google.com/maps?q=Annapurna+Rasoi+Paschim+Vihar+Delhi",
+        areaServed: {
+          "@type": "Place",
+          name: "West Delhi",
         },
         aggregateRating: {
           "@type": "AggregateRating",
