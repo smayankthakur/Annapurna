@@ -28,7 +28,7 @@ export default function LocationSection() {
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(120deg,rgba(212,175,55,0.35),transparent_30%,transparent_70%,rgba(244,230,194,0.35))]" />
           <div className="relative overflow-hidden rounded-3xl border border-white/10">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.872936554688!2d77.0667528!3d28.66352299999999!2m3!1f0!2m3!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0584f0e2273b%3A0x1178c03580ae3973!2sANNAPURNA%20RASOI!5e0!3m2!1sen!2sin!4v1772620931772!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.872937368093!2d77.06417787550194!3d28.663522975647783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0584f0e2273b%3A0x1178c03580ae3973!2sANNAPURNA%20RASOI!5e0!3m2!1sen!2sin!4v1772695739869!5m2!1sen!2sin"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Annapurna Rasoi on Google Maps"
