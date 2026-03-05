@@ -1,6 +1,8 @@
 ﻿"use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
+import logo from "@/app/logo.png";
 
 type NavbarProps = {
   orderUrl: string;
@@ -50,15 +52,17 @@ export default function Navbar({ orderUrl }: NavbarProps) {
           <button
             type="button"
             onClick={() => handleSmoothScroll("hero")}
-            className="flex items-center gap-3"
+            className="flex items-center"
+            aria-label="Go to home"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/30 bg-gold/10 font-heading text-xl text-gold">
-              A
-            </span>
-            <span className="text-left">
-              <span className="block font-heading text-xl text-white sm:text-2xl">Annapurna Rasoi</span>
-              <span className="text-xs tracking-[0.24em] text-muted">WEST DELHI</span>
-            </span>
+            <Image
+              src={logo}
+              alt="Annapurna Rasoi"
+              width={238}
+              height={64}
+              priority
+              className="h-auto w-[188px] sm:w-[220px]"
+            />
           </button>
 
           <div className="hidden items-center gap-8 md:flex">
