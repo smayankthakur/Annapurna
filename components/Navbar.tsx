@@ -61,7 +61,7 @@ export default function Navbar({ orderUrl }: NavbarProps) {
               width={238}
               height={64}
               priority
-              className="h-auto w-[188px] sm:w-[220px]"
+              className="h-10 w-auto object-contain sm:h-11 lg:h-12"
             />
           </button>
 
